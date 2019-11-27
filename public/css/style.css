@@ -1,1 +1,8 @@
-
+/* Custom Syles */
+/* Tags  */
+header h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 200;
+	letter-spacing: 2px;
+}

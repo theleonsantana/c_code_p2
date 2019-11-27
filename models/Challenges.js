@@ -1,11 +1,12 @@
 const mongoose = require('../db/connection');
 
 const ChallengesSchema = new mongoose.Schema({
-	problem: String,
+	title: String,
 	author: String,
 	source: String,
 	language: String,
-	solution: String,
+	problem: String,
+	solution: [String],
 	tags: [String],
 	createdAt: { type: Date, default: Date.now },
 });
