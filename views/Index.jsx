@@ -77,13 +77,18 @@ class Index extends React.Component {
 											>
 												Edit
 											</a>
-											<button
-												type="button"
-												className="btn btn-danger"
-												style={{ float: 'right' }}
+											<form
+												action={`/challenges/${challenge._id}?_method=DELETE`}
+												method="POST"
 											>
-												Delete
-											</button>
+												<button
+													type="submit"
+													className="btn btn-danger"
+													style={{ float: 'right' }}
+												>
+													Delete
+												</button>
+											</form>
 										</div>
 									</div>
 								</div>

@@ -20,13 +20,19 @@ class Show extends React.Component {
 						>
 							Edit
 						</a>
-						<button
-							type="button"
-							className="btn btn-danger"
-							style={{ float: 'right' }}
+						<form
+							action={`/challenges/${this.props._id}?_method=DELETE`}
+							method="POST"
 						>
-							Delete
-						</button>
+							<button
+								type="submit"
+								className="btn btn-danger"
+								style={{ float: 'right', marginTop: '-38px' }}
+							>
+								Delete
+							</button>
+						</form>
+
 						<hr />
 						<h3>Problem</h3>
 						<p>{this.props.problem}</p>
