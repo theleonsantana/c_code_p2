@@ -8,6 +8,6 @@ header h1 {
 }
 
 /* css classes */
-.card-btn button {
+.card-btn a {
 	margin: 0 10px;
 }

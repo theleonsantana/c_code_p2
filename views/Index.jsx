@@ -31,9 +31,9 @@ class Index extends React.Component {
 			>
 				<h2>JavaScript Library</h2>
 				<div className="row row-cols-1 row-cols-md-2">
-					{this.props.challenges.map((challenge, index) => {
+					{this.props.challenges.map((challenge, i) => {
 						return (
-							<div className="col-4 mb-4">
+							<div className="col-4 mb-4" id={i} key={`key${i}`}>
 								<div className="card">
 									<div className="card-header">
 										<b>{challenge.title}</b>
@@ -65,13 +65,23 @@ class Index extends React.Component {
 										<p className="card-text">{challenge.problem}</p>
 										<hr />
 										<div className="card-btn">
-											<button type="button" class="btn btn-primary">
+											<a
+												className="btn btn-primary"
+												href={`/challenges/${challenge._id}`}
+											>
 												More..
-											</button>
-											<button type="button" class="btn btn-success">
+											</a>
+											<a
+												className="btn btn-success"
+												href={`/challenges/edit/${challenge._id}`}
+											>
 												Edit
-											</button>
-											<button type="button" className="btn btn-danger">
+											</a>
+											<button
+												type="button"
+												className="btn btn-danger"
+												style={{ float: 'right' }}
+											>
 												Danger
 											</button>
 										</div>
