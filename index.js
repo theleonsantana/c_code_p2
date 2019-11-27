@@ -1,9 +1,14 @@
 const express = require('express');
 const method = require('method-override');
 const mongoose = require('./db/connection.js');
-const port = 3000;
 
 const app = express();
+
+//___________________
+//Port
+//___________________
+// Allow use of Heroku's port or your own local port, depending on the environment
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
@@ -29,4 +34,4 @@ mongoose.connection.once('open', () => {
 	console.log('connected to mongo');
 });
 
-app.listen(port, () => console.log("It's Alive! "));
+app.listen(PORT, () => console.log(`It's Alive! on port ${PORT}`));

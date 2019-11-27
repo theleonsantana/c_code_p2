@@ -1,6 +1,9 @@
 {
 	"name": "c_code_p2",
 	"version": "1.0.0",
+	"engines": {
+		"node": "13.1.0"
+	},
 	"description": "",
 	"main": "index.js",
 	"scripts": {
