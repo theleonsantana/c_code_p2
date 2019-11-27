@@ -1,5 +1,9 @@
 /* Custom Syles */
 /* Tags  */
+body {
+	background-color: #f1f1f1;
+}
+
 header h1 {
 	text-align: center;
 	text-transform: uppercase;
