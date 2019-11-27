@@ -82,7 +82,7 @@ class Index extends React.Component {
 												className="btn btn-danger"
 												style={{ float: 'right' }}
 											>
-												Danger
+												Delete
 											</button>
 										</div>
 									</div>
