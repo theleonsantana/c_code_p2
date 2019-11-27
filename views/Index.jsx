@@ -64,6 +64,17 @@ class Index extends React.Component {
 										<h5>Problem:</h5>
 										<p className="card-text">{challenge.problem}</p>
 										<hr />
+										<div className="card-btn">
+											<button type="button" class="btn btn-primary">
+												More..
+											</button>
+											<button type="button" class="btn btn-success">
+												Edit
+											</button>
+											<button type="button" className="btn btn-danger">
+												Danger
+											</button>
+										</div>
 									</div>
 								</div>
 							</div>
