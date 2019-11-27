@@ -1,58 +1,31 @@
 const React = require('react');
 const AppLayout = require('../layouts/AppLayout.jsx');
 
-class Edit extends React.Component {
+class New extends React.Component {
 	render() {
 		return (
-			<AppLayout
-				title="Edit Challenge"
-				addNewLink="/challenges/new"
-				addNewText="Add to the Library"
-			>
-				<form
-					action={`/challenges/${this.props._id}?_method=put`}
-					method="post"
-				>
+			<AppLayout title="Add New Challenge">
+				<form action={`/`} method="post">
 					<div className="row">
 						<div className="col-6">
 							<div class="form-group">
 								<label>Title</label>
-								<input
-									type="text"
-									className="form-control"
-									defaultValue={this.props.title}
-									name="title"
-								/>
+								<input type="text" className="form-control" name="title" />
 								{/* <small id="emailHelp" className="form-text text-muted">
 									We'll never share your email with anyone else.
 								</small> */}
 							</div>
 							<div class="form-group">
 								<label>Author</label>
-								<input
-									type="text"
-									className="form-control"
-									defaultValue={this.props.author}
-									name="author"
-								/>
+								<input type="text" className="form-control" name="author" />
 							</div>
 							<div class="form-group">
 								<label>Source</label>
-								<input
-									type="text"
-									className="form-control"
-									defaultValue={this.props.source}
-									name="source"
-								/>
+								<input type="text" className="form-control" name="source" />
 							</div>
 							<div class="form-group">
 								<label>Language</label>
-								<input
-									type="text"
-									className="form-control"
-									defaultValue={this.props.language}
-									name="language"
-								/>
+								<input type="text" className="form-control" name="language" />
 							</div>
 						</div>
 						<div className="col-6">
@@ -61,7 +34,6 @@ class Edit extends React.Component {
 								<textarea
 									className="form-control"
 									rows="3"
-									defaultValue={this.props.problem}
 									name="problem"
 								></textarea>
 							</div>
@@ -70,22 +42,16 @@ class Edit extends React.Component {
 								<textarea
 									className="form-control"
 									rows="5"
-									defaultValue={this.props.solution}
 									name="solution"
 								></textarea>
 							</div>
 							<div class="form-group">
 								<label>Tags</label>
-								<input
-									type="text"
-									className="form-control"
-									defaultValue={this.props.tags}
-									name="tags"
-								/>
+								<input type="text" className="form-control" name="tags" />
 							</div>
 						</div>
 						<button type="submit" class="btn btn-primary btn-lg btn-block">
-							Update
+							Create New
 						</button>
 					</div>
 				</form>
@@ -93,4 +59,4 @@ class Edit extends React.Component {
 		);
 	}
 }
-module.exports = Edit;
+module.exports = New;
