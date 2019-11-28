@@ -20,7 +20,6 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-	console.log(req.body);
 	Challenges.create(req.body).then(() => {
 		res.redirect('/');
 	});

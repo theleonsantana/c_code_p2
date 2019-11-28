@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 		});
 });
 
-app.use('/challenges', challengesController);
+app.use('/', challengesController);
 
 mongoose.connection.once('open', () => {
 	console.log('connected to mongo');
