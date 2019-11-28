@@ -34,7 +34,7 @@ router.get('/edit/:id', (req, res) => {
 router.put('/:id', (req, res) => {
 	Challenges.findOneAndUpdate({ _id: req.params.id }, req.body).then(
 		challenge => {
-			res.redirect(`/challenges/${challenge.id}`);
+			res.redirect(`/${challenge.id}`);
 		}
 	);
 });

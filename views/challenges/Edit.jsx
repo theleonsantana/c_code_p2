@@ -6,13 +6,10 @@ class Edit extends React.Component {
 		return (
 			<AppLayout
 				title="Edit Challenge"
-				addNewLink="/challenges/new"
+				addNewLink="/new"
 				addNewText="Add to the Library"
 			>
-				<form
-					action={`/challenges/${this.props._id}?_method=put`}
-					method="post"
-				>
+				<form action={`/${this.props._id}?_method=put`} method="post">
 					<div className="row">
 						<div className="col-6">
 							<div class="form-group">

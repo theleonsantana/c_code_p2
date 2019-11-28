@@ -8,22 +8,16 @@ class Show extends React.Component {
 		return (
 			<AppLayout
 				title={this.props.title}
-				addNewLink="/challenges/new"
+				addNewLink="/new"
 				addNewText="Add to the Library"
 			>
 				<div className="row">
 					<div className="col">
 						<hr />
-						<a
-							className="btn btn-success"
-							href={`/challenges/edit/${this.props._id}`}
-						>
+						<a className="btn btn-success" href={`/edit/${this.props._id}`}>
 							Edit
 						</a>
-						<form
-							action={`/challenges/${this.props._id}?_method=DELETE`}
-							method="POST"
-						>
+						<form action={`/${this.props._id}?_method=DELETE`} method="POST">
 							<button
 								type="submit"
 								className="btn btn-danger"

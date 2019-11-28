@@ -26,7 +26,7 @@ class Index extends React.Component {
 		return (
 			<AppLayout
 				title="Code Challenges"
-				addNewLink="/challenges/new"
+				addNewLink="/new"
 				addNewText="Add to the Library"
 			>
 				<h2>JavaScript Library</h2>
@@ -65,20 +65,17 @@ class Index extends React.Component {
 										<p className="card-text">{challenge.problem}</p>
 										<hr />
 										<div className="card-btn">
-											<a
-												className="btn btn-primary"
-												href={`/challenges/${challenge._id}`}
-											>
+											<a className="btn btn-primary" href={`/${challenge._id}`}>
 												More..
 											</a>
 											<a
 												className="btn btn-success"
-												href={`/challenges/edit/${challenge._id}`}
+												href={`/edit/${challenge._id}`}
 											>
 												Edit
 											</a>
 											<form
-												action={`/challenges/${challenge._id}?_method=DELETE`}
+												action={`/${challenge._id}?_method=DELETE`}
 												method="POST"
 											>
 												<button
