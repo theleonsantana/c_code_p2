@@ -7,16 +7,10 @@ const db = mongoose.connection;
 const MONGODB_URI =
 	process.env.MONGODB_URI || 'mongodb://localhost/' + `codechallenges`;
 
-// mongoose.connect('mongodb://localhost:27017/codechallenges', {
-// 	useNewUrlParser: true,
-// 	useUnifiedTopology: true,
-// 	useFindAndModify: false,
-// });
-
-// Connect to Mongo
 mongoose.connect(MONGODB_URI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
+	useFindAndModify: false,
 });
 
 // Error / success
